@@ -1,4 +1,4 @@
-package BaekJoon.level4;
+package BaekJoon.level5;
 
 // 정수 N개의 합
 

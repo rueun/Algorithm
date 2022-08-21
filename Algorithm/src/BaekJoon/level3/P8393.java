@@ -1,4 +1,4 @@
-package BaekJoon.level2;
+package BaekJoon.level3;
 
 import java.io.BufferedReader;
 import java.io.IOException;

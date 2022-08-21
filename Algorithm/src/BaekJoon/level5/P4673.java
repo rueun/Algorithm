@@ -1,4 +1,4 @@
-package BaekJoon.level4;
+package BaekJoon.level5;
 
 // 셀프 넘버
 

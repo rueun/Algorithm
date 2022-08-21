@@ -1,24 +1,25 @@
-package BaekJoon.level2;
+package BaekJoon.level3;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-// A+B - 3
+// A+B - 5
 
 /* 문제
  * 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
  */
 
 /* 입력
- * 첫째 줄에 테스트 케이스의 개수 T가 주어진다.
+ * 입력은 여러 개의 테스트 케이스로 이루어져 있다.
  * 각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
-5
+ * 입력의 마지막에는 0 두 개가 들어온다.
 1 1
 2 3
 3 4
 9 8
-5 2 
+5 2
+0 0
  */
 
 /* 출력
@@ -30,20 +31,24 @@ import java.util.StringTokenizer;
 7
  */
 
-public class P10950 {
+public class P10951 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		 
-		int N = Integer.parseInt(br.readLine());
- 
 		StringTokenizer st;
+		
 		StringBuilder sb = new StringBuilder();
- 
-		for (int i = 0; i < N; i++) {
-			st = new StringTokenizer(br.readLine(), " ");
-			sb.append(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken())+ "\n");
+		while(true) {
+			st = new StringTokenizer(br.readLine());
+			
+			int A = Integer.parseInt(st.nextToken());
+			int B = Integer.parseInt(st.nextToken());
+			
+			if(A == 0 && B == 0) {
+				br.close();
+				break;
+			}
+			sb.append(A+B).append("\n");
 		}
- 
-		System.out.println(sb.toString());
+		System.out.println(sb);
 	}
 }

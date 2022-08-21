@@ -1,4 +1,4 @@
-package BaekJoon.level4;
+package BaekJoon.level5;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
