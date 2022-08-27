@@ -18,33 +18,18 @@ public class FindPrimeNumber {
 	
 	public static int solution(int n) {
 		int answer = 0;
-        
-        for(int i=2; i<=n; i++) {
-        	if (isPrime(i)) {
-        		answer++;
-        	}
-        }
-        
-        /* for문만 이용해서 풀기
-        for(int i=2; i<=n; i++) {
-        	for(int j=2; j<=Math.sqrt(i); j++) {
-    			if(i%j==0) { 
-    				count++;
-    				break;
-    			}
-    		}
-        	
-        	if(count == 0) {
-        		answer++;
-        	}
-        	count = 0;
-        }
-        */
+		
+		for(int i=2; i<=n; i++) {
+			if(isPrime(i)) {
+				answer++;
+			}
+		}
+		
         return answer;
     }
-    
+
 	// 소수인지 판별
-    static boolean isPrime(int n) {
+	public static boolean isPrime(int n) {
 		for(int i=2; i<=Math.sqrt(n); i++) {
 			if(n%i==0) {
 				return false;
@@ -52,4 +37,5 @@ public class FindPrimeNumber {
 		}
 		return true;
 	}
+
 }

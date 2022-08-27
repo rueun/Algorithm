@@ -1,6 +1,7 @@
 package programmers.level1.practice;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 // 문자열 내림차순 배치
 
@@ -17,13 +18,11 @@ public class SortStringsDescending {
 	}
 	
 	public static String solution(String s) {
-		String answer = "";
-		char[] chars = s.toCharArray();
+		char[] c = s.toCharArray();
+		Arrays.sort(c);
 		
-		Arrays.sort(chars);
+		String str = String.valueOf(c);
 		
-		answer = new StringBuffer(new String(chars)).reverse().toString();
-       
-        return answer;
+		return new StringBuffer(str).reverse().toString();
     }
 }

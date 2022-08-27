@@ -21,27 +21,27 @@ public class SameNumberHate {
 	}
 	
 	public static int[] solution(int []arr) {
+		Stack<Integer> stack = new Stack<>();
 		
-		Stack<Integer> mystack = new Stack<>();
-		
-		mystack.push(arr[0]); // 초기값 셋팅
+		stack.add(arr[0]);
 		
 		for(int i=1; i<arr.length; i++) {
-			if(mystack.peek() == arr[i]) {
+			if(stack.peek() == arr[i]) {
 				continue;
 			}
 			
-			mystack.push(arr[i]);
+			stack.add(arr[i]);
 		}
 		
-		int[] answer = new int[mystack.size()];
+		int[] answer = new int[stack.size()];
 		
 		int idx = 0;
-		for(int stack : mystack) {
-			answer[idx] = stack;
+		
+		for(int st : stack) {
+			answer[idx] = st;
 			idx++;
 		}
-
-        return answer;
+		
+		return answer;
     }
 }

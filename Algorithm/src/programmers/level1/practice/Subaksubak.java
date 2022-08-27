@@ -13,31 +13,36 @@ package programmers.level1.practice;
 
 public class Subaksubak {
 	public static void main(String[] args) {
-		System.out.println(solution(1));
+		System.out.println(solution(4));
 	}
 	
 	public static String solution(int n) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         
-        int share = n / 2;
-        int rest = n % 2;
+        int a = n / 2;
+        int b = n % 2;
         
-        for(int i=0; i<share; i++) {
+        for(int i=0; i<a; i++) {
         	sb.append("수박");
         }
         
-        if(rest != 0) {
+        if(b == 1) {
         	sb.append("수");
         }
         
         /*
-        StringBuffer sf = new StringBuffer();
-        for (int i=1; i<=n; i++) {
-            sf.append(i%2==1?"수":"박");
+        for(int i=1; i<=n; i++) {
+        	sb.append(i%2==1 ? "수" : "박");
         }
-        return sf.toString();
         */
         
         return sb.toString();
+        
+        
+        
+        
+        
+        
+        
     }
 }
