@@ -1,4 +1,4 @@
-package programmers.level1;
+package programmers.level1.practice;
 
 public class CountPY {
 	public static void main(String[] args) {
