@@ -52,7 +52,7 @@ public class Fibonacci {
         cnt = sc.nextInt();
         
         n=0;
-        a=0;
+        a=1;
         b=1;
         
         while(n<cnt) {
